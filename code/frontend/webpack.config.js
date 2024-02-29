@@ -10,11 +10,13 @@ module.exports = {
   mode: "development",
   devtool: "source-map",
   devServer: {
-    port: 3000,
-    contentBase: path.join(__dirname, "public"),
+    port: 8081,
+    static: {
+        directory: path.join(__dirname, "public"),
+    },
     hot: true,
     historyApiFallback: { index: "index.html" }
-  },
+},
   module: {
     rules: [
       {
